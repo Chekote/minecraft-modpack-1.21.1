@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+set -e
+
+./bin/clean_manifest.php manifest.json
+git add manifest.json
+
+touch clean_modlist.html
+
+# Move the list items to a separate file without the opening and closing <ul> tags
+cat modlist.html | sed "/<ul>/d" | sed "/<\/ul>/d" | sed '/^$/d' > clean_modlist.html
+
+# Sort the list items
+sort clean_modlist.html -o clean_modlist.html
+
+# Write just the opening <ul> tag to the original file
+echo "<ul>" > modlist.html
+
+# Append the sorted list items to the original file
+cat clean_modlist.html >> modlist.html
+
+# Remove the temporary file
+rm clean_modlist.html
+
+# Write the closing </ul> tag to the original file
+echo "</ul>" >> modlist.html
+
+# Stage the changes
+git add modlist.html
