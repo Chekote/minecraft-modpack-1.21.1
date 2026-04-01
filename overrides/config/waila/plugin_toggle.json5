@@ -4,5 +4,7 @@
   "waila:harvest": true,
   "waila:extra": true,
   "waila:neo": true,
-  "mekanism:plugin": true
+  "mekanism:plugin": true,
+  "balm:wthit": true,
+  "waystones:plugin": true
 }
