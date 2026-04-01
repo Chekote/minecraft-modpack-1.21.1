@@ -1,0 +1,19 @@
+{
+    "minecraft": {
+        "version": "1.21.1",
+        "modLoaders": [
+            {
+                "id": "neoforge-21.1.222",
+                "primary": true
+            }
+        ],
+        "recommendedRam": 4096
+    },
+    "manifestType": "minecraftModpack",
+    "manifestVersion": 1,
+    "name": "Chekote's Modpack 1.21.1",
+    "version": "",
+    "author": "",
+    "files": [],
+    "overrides": "overrides"
+}
